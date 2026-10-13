@@ -1,0 +1,193 @@
+:root {
+  --bg: #fbfaf8;
+  --ink: #1b1b18;
+  --ink-soft: #4a4844;
+  --rule: #ddd8cf;
+  --accent: #8a5a2b;
+  --band: #102b3f;
+  --band-ink: #d4e5ec;
+  --max: 760px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15140f;
+    --ink: #ece7dd;
+    --ink-soft: #b9b3a6;
+    --rule: #39362c;
+    --accent: #d2995c;
+    --band: #0a1c29;
+    --band-ink: #c3d7de;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  line-height: 1.65;
+  font-size: 18px;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site {
+  border-bottom: 1px solid var(--rule);
+  padding: 32px 0 20px;
+}
+
+header.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.site-name {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-tagline {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-tagline:hover {
+  color: var(--accent);
+}
+
+main {
+  padding: 48px 0 80px;
+}
+
+h2.section {
+  font-size: 22px;
+  line-height: 1.35;
+  margin: 48px 0 6px;
+}
+
+h2.section:first-of-type {
+  margin-top: 0;
+}
+
+.section-note {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+}
+
+.bio {
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+  max-width: 64ch;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  margin: 22px 0 0;
+}
+
+.contact-links a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+}
+
+/* ---- Services ---- */
+
+.service-group {
+  margin: 0 0 12px;
+}
+
+.service-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.service-list li:first-child {
+  padding-top: 0;
+}
+
+.service-name {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+
+.service-desc {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 64ch;
+}
+
+/* ---- Closing band ---- */
+
+.band {
+  background: var(--band);
+  color: var(--band-ink);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin: 48px 0 0;
+}
+
+.band p {
+  margin: 0;
+  font-size: 17px;
+}
+
+.band a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer.site {
+  border-top: 1px solid var(--rule);
+  padding: 28px 0 48px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .band { padding: 22px 20px; }
+}
